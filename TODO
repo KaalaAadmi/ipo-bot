@@ -1,0 +1,9 @@
+- the data in the db is not correct.
+
+  - The end_data or the close_date fo the ipo is not showing correctly
+  - many of the values for the subscription is coming as N/A.
+  - even in the `LiveIPODetails` object in the db, the end_date is not correct. The start date contains the start as well as the end date(Eg: `10th – 14th Oct 2025`)
+  - the subscription details should be part of the `LiveIPOSubscriptionDetails` field and not be there as new fields.
+
+- find allotment dates of the ipo and check whether the ipos are allotted to us in gmail.
+  - update the google calendar reminder with [ALLOTTED] if allotted otherwise update it with [NOT ALLOTTED]

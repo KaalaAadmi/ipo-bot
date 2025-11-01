@@ -1,0 +1,30 @@
+# Cached files
+*/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.sqlite3
+
+# Environment files
+.env
+.venv/
+venv/
+env/
+ENV/
+*.env
+*.venv
+
+# Test files
+*_test.py
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+
+# Credentials
+credentials.json
+token.json
