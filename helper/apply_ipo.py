@@ -404,9 +404,23 @@ def apply_ipo(ipo_name):
 
 
                 # --- Uncomment and correct the locator for the submit button if needed ---
-                submit_btn = wait.until(EC.element_to_be_clickable((By.ID, "submit11")))
+                submit_btn = wait.until(EC.element_to_be_clickable((By.NAME, "submit11")))
                 submit_btn.click()
                 print("IPO application submitted.")
+                sleep(5)
+                # confirmtable
+                wait.until(EC.element_to_be_clickable((By.NAME, "confirmtable")))
+                confirm_btn=driver.find_element(By.ID,"submit1")
+                confirm_btn.click()
+                print("Confirmed submission dialog.")
+                sleep(5)
+                print("IPO application process completed.")
+                success_msg=driver.find_element(By.XPATH,"/html/body/form/table/tbody/tr[1]/td/b/p").text
+                print(f"Application Result Message: {success_msg}")
+                sleep(5)
+                get_frame = driver.find_element(By.ID, "Frame13")
+                driver.switch_to.frame(get_frame)
+                
                 sleep(60)
                 # --- Modification 3: Switch back to default content (Crucial if the Submit button is outside) ---
                 driver.switch_to.default_content()
